@@ -1,0 +1,20 @@
+<div class="grid-container">
+    <h1 class="mat-h1"></h1>
+    
+    <mat-grid-list cols="4" rowHeight="250px">
+        <mat-grid-tile
+            *ngFor="let sup of superheros"
+            [colspan]="sup.cols"
+            [rowspan]="sup.rows">
+          <img src="assets/superheros/{{sup.name}}.jpg" />
+  
+          <mat-grid-tile-footer>
+            <h3 mat-line>{{sup.name}}</h3>
+            <span mat-line>{{sup.status}}</span>
+            <button mat-icon-button aria-label="info icon">
+                <mat-icon>info</mat-icon>
+              </button>
+          </mat-grid-tile-footer>
+        </mat-grid-tile>
+      </mat-grid-list>
+  </div>
